@@ -7,9 +7,13 @@ This project demonstrates how to containerize a simple Python Flask" web applica
  Project Overview
 
  🐍 Built a basic Flask web application
+ 
  🐳 Containerized the app using Docker
+ 
  ☸️ Deployed it to Kubernetes using a StatefulSet
+ 
  🌐 Exposed the app via ClusterIP (internal) and NodePort (external)
+ 
  🧪 Tested using `kubectl` and browser on Minikube
 
 
@@ -48,17 +52,20 @@ This project demonstrates how to containerize a simple Python Flask" web applica
 "If this works, your app is fine and your Windows firewall or Docker NAT is blocking access from the host."
 
 8. Last Resort: Port-Forwarding -->
+   
 If NodePort still doesn’t work externally, just use  :
 
 kubectl port-forward svc/flask-nodeport 5000:80
 
 Now Open on browser  :  http://localhost:5000
+
 "This always works since it bypasses networking and directly tunnels traffic."
 
 
 Finally  : Use Minikube Addons Dashboard
 
    --minikube dashboard
+   
 "This opens a full UI where you can inspect services, pods, logs, etc."
 
 
